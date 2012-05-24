@@ -5,4 +5,5 @@ Bundles
 -------
 
 * [pathogen](https://github.com/tpope/vim-pathogen)
+* [vimproc](https://github.com/Shougo/vimproc)
 

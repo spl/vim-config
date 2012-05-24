@@ -1,3 +1,6 @@
 [submodule "cfg/bundle/pathogen"]
 	path = cfg/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "cfg/bundle/vimproc"]
+	path = cfg/bundle/vimproc
+	url = git://github.com/Shougo/vimproc.git
