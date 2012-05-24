@@ -1,5 +1,9 @@
 " ~/.vimrc
 
+" Install pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 " This is Vim, not vi
 set nocompatible
 
