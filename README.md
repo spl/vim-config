@@ -20,3 +20,6 @@ locations on the right.
 *  Mac, Unix:   `$HOME/.vim`
 *  Win:         `$HOME/vimfiles`
 
+`bin/macvim`    - command-line script chooses `gvim` or `gvimdiff` for `MacVim`
+*  Mac:         `$HOME/bin/gvim` *and* `$HOME/bin/gvimdiff`
+
