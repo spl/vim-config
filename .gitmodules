@@ -4,3 +4,6 @@
 [submodule "cfg/bundle/vimproc"]
 	path = cfg/bundle/vimproc
 	url = git://github.com/Shougo/vimproc.git
+[submodule "cfg/bundle/ghc-mod"]
+	path = cfg/bundle/ghc-mod
+	url = git://github.com/eagletmt/ghcmod-vim.git
