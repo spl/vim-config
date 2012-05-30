@@ -1,75 +1,67 @@
-" ~/.vimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This is the primary local configuration file for Vim.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Install pathogen
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
-" This is Vim, not vi
+" First thing's first: I want Vim, not vi.
 set nocompatible
 
-" Disable pseudo-tty
-set noguipty
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Settings
+" Pathogen
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Turn on automatic file type detection with indentation and plugins.
-filetype on
-filetype indent on
-filetype plugin on
+" Pathogen should be started before 'filetype'
 
-" Turn on syntax highlighting.
-syntax on
+" Install
+runtime bundle/pathogen/autoload/pathogen.vim
 
-" Show line numbers on the left.
-set number
+" Start
+call pathogen#infect()
 
-" Show current mode (INSERT, REPLACE, or VISUAL) on last line.
-set showmode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Display
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Show the command in the status line.
-set showcmd
+set noguipty " Disable pseudo-tty
 
-" Show line and column number of cursor at the bottom.
-set ruler
+syntax on " Turn on syntax highlighting
+filetype plugin indent on " Detect file types with plugins and indentation
 
-" Don't wrap lines longer than the given window width. I hate that!
-set nowrap
+set number    " Show line numbers on the left
+set showmode  " Show current mode (INSERT, REPLACE, or VISUAL) on command line
+set showcmd   " Show the command in the status line
+set ruler     " Show line and column number of cursor at the bottom
+set nowrap    " Don't wrap lines longer than the given window width - I hate that!
 
-" Use a lighter background. Better for the eyes?
-set background=light
+set background=light " Use a lighter background. Better for the eyes?
 
-" Use incremental search.
-set incsearch
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Highlight the search patterns in the text.
-set hlsearch
+set incsearch  " Use incremental search
+set hlsearch   " Highlight search patterns in the text
 
-" Don't insert two spaces after '.', '!', or '?'.
-set nojoinspaces
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Editing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Default tabstop in number of characters.
-set tabstop=8
+set nojoinspaces  " Don't insert extra spaces after punctuation
+set backspace=2   " Allow backspacing over everything in insert mode
+set textwidth=80  " Wrap lines in insert mode
 
-" Default shiftwidth in number of characters.
-set shiftwidth=2
+" Tabs and indent
+set tabstop=8     " Number of spaces for a <Tab>
+set shiftwidth=2  " Number of spaces for an indent
+set expandtab     " I don't like tabs, so put spaces in their place.
 
-" Allow backspacing over autoindent, line breaks, and start of insert.
-set backspace=2
+set visualbell    " Don't beep at me!
 
-" Don't beep at me!
-set visualbell
-
-" I don't like tabs, so put spaces in their place.
-set expandtab
-
-" Wrap lines at 80 characters in insert mode.
-set textwidth=80
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Font
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("gui_running")
   if has("win32")
-    " Set the font for GUI in Windows.
     set guifont=Lucida_Console:h9:
   endif
   if has("gui_macvim")
@@ -77,14 +69,20 @@ if has("gui_running")
   endif
 endif
 
-" Configure browser for haskell_doc.vim
-let g:haddock_browser = "open"
-let g:haddock_browser_callformat = "%s file://%s"
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Macros
+" haskell_doc.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" This module causes problems, so these are disabled for now.
+
+"let g:haddock_browser = "open"
+"let g:haddock_browser_callformat = "%s file://%s"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" matchit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable % to work on more than just braces/brackets
 source $VIMRUNTIME/macros/matchit.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
