@@ -117,3 +117,34 @@ map <C-K> gw}
 " Enable % to work on more than just braces/brackets
 source $VIMRUNTIME/macros/matchit.vim
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Completion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Insert mode completion: always show menu and extra information
+set complete=menuone,preview
+
+" Disable AutoComplPop: automatically opening popup menu for completions
+let g:acp_enableAtStartup=0
+
+" Enable neocomplcache
+let g:neocomplcache_enable_at_startup=1
+
+" Do not ignore the case in the input
+let g:neocomplcache_enable_smart_case=1
+
+" Disable automatic completion. Use <C-x><C-u>
+let g:neocomplcache_disable_auto_complete=1
+
+" A function for the key maps below
+function! s:check_back_space()"{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}
+
+" Map <C-d> in insert mode to do completion
+inoremap <expr> <C-d> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<C-d>" : "\<C-x>\<C-u>"
+
+" Map <Tab> in insert mode to go to next completion option
+inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
