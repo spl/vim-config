@@ -122,7 +122,7 @@ source $VIMRUNTIME/macros/matchit.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Insert mode completion: always show menu and extra information
-set complete=menuone,preview
+set completeopt=menuone,preview
 
 " Disable AutoComplPop: automatically opening popup menu for completions
 let g:acp_enableAtStartup=0
