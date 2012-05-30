@@ -70,61 +70,21 @@ if has("gui_running")
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" haskell_doc.vim
+" Detect file types
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" This module causes problems, so these are disabled for now.
-
-"let g:haddock_browser = "open"
-"let g:haddock_browser_callformat = "%s file://%s"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" matchit
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Enable % to work on more than just braces/brackets
-source $VIMRUNTIME/macros/matchit.vim
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Autocommands
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"autocmd BufReadPost * if exists("b:current_syntax")
-"autocmd BufReadPost *   if b:current_syntax == "verilog"
-"autocmd BufReadPost *   endif
-"autocmd BufReadPost *   if b:current_syntax == "c"
-"autocmd BufReadPost *      set cindent
-"autocmd BufReadPost *   endif
-"autocmd BufReadPost *   if b:current_syntax == "cpp"
-"autocmd BufReadPost *      set cindent
-"autocmd BufReadPost *   endif
-"autocmd BufReadPost *   if b:current_syntax == "java"
-"autocmd BufReadPost *      set cindent
-"autocmd BufReadPost *   endif
-"autocmd BufReadPost * endif
 
 augroup filetypedetect
 
-" Jak
-au BufNewFile,BufRead *.jak             setf java
-
-" VPP and SystemVerilog
+" File types
+au BufNewFile,BufRead *.jak             setf java " Jak
 au BufNewFile,BufRead *.vpp,*.sv,*.svpp setf verilog
-
-" JFlex
 au BufNewFile,BufRead *.flex,*.jflex    setf jflex
-
-" YACC
 au BufNewFile,BufRead *.yacc            setf yacc
+au BufNewFile,BufRead *.ghs             setf haskell " Generic Haskell
+au BufNewFile,BufRead *.lagda           setf lhaskell " Literate Agda
 
-" Generic Haskell
-au BufNewFile,BufRead *.ghs             setf haskell
-
-" Literate Agda to Literate Haskell
-au BufNewFile,BufRead *.lagda           setf lhaskell
-
-" Set ghc as compiler for Haskell files
-au BufEnter *.hs                        compiler ghc
+" Compiler
+au BufEnter *.hs,*.lhs                  compiler ghc
 
 augroup END
 
@@ -140,4 +100,20 @@ map <C-J> gwap
 " Same as gwap, except only do the lines from the cursor position to the end of
 " the paragraph.
 map <C-K> gw}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" haskell_doc.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" This module causes problems, so these are disabled for now.
+
+"let g:haddock_browser = "open"
+"let g:haddock_browser_callformat = "%s file://%s"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" matchit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable % to work on more than just braces/brackets
+source $VIMRUNTIME/macros/matchit.vim
 
