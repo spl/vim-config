@@ -12,7 +12,7 @@ You should create the appropriate links to each of the files or directories in
 this repository. The following files on the left should be linked to the
 locations on the right.
 
-`vimrc`         - the primary configuration file
+`vimrc.vim`     - the primary configuration file
 *  Mac, Unix:   `$HOME/.vimrc`
 *  Win:         `$HOME/_vimrc`
 
