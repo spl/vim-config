@@ -86,9 +86,6 @@ au BufNewFile,BufRead *.yacc            setf yacc
 au BufNewFile,BufRead *.ghs             setf haskell " Generic Haskell
 au BufNewFile,BufRead *.lagda           setf lhaskell " Literate Agda
 
-" Compiler
-"au BufEnter *.hs,*.lhs                  compiler ghc
-
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,13 +102,19 @@ map <C-J> gwap
 map <C-K> gw}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" haskell_doc.vim
+" haskellmode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" This module causes problems, so these are disabled for now.
+" Set compiler to GHC for Haskell/Literate Haskell files
+au BufEnter *.hs,*.lhs compiler ghc
 
-"let g:haddock_browser = "open"
-"let g:haddock_browser_callformat = "%s file://%s"
+" Tell ghc.vim which executable to use
+let g:ghc="/usr/bin/ghc"
+
+" Configure haskell_doc.vim
+let g:haddock_browser="open" " Execute to browse HTML
+let g:haddock_browser_callformat="%s file://%s" " Call browser with this format
+let g:haddock_browser_nosilent=1 " Ask before opening browser
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " matchit

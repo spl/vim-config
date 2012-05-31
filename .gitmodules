@@ -13,3 +13,6 @@
 [submodule "cfg/bundle/neco-ghc"]
 	path = cfg/bundle/neco-ghc
 	url = git://github.com/ujihisa/neco-ghc.git
+[submodule "cfg/bundle/haskellmode"]
+	path = cfg/bundle/haskellmode
+	url = git://github.com/lukerandall/haskellmode-vim.git
