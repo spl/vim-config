@@ -17,6 +17,9 @@ runtime bundle/pathogen/autoload/pathogen.vim
 " Start
 call pathogen#infect()
 
+" Load doc tags from bundles
+Helptags
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
