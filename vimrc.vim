@@ -84,7 +84,7 @@ au BufNewFile,BufRead *.ghs             setf haskell " Generic Haskell
 au BufNewFile,BufRead *.lagda           setf lhaskell " Literate Agda
 
 " Compiler
-au BufEnter *.hs,*.lhs                  compiler ghc
+"au BufEnter *.hs,*.lhs                  compiler ghc
 
 augroup END
 
