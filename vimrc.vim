@@ -33,7 +33,8 @@ set number    " Show line numbers on the left
 set showmode  " Show current mode (INSERT, REPLACE, or VISUAL) on command line
 set showcmd   " Show the command in the status line
 set ruler     " Show line and column number of cursor at the bottom
-set nowrap    " Don't wrap lines longer than the given window width - I hate that!
+set nowrap    " Don't wrap displayed lines
+set linebreak " But if I do 'set wrap', then wrap with the 'breakat' characters
 
 set background=light " Use a lighter background. Better for the eyes?
 
