@@ -25,7 +25,7 @@ locations on the right.
 *  Mac, Unix:   `$HOME/.vimrc`
 *  Win:         `$HOME/_vimrc`
 
-`cfg`           - directory of Vim configuration files
+`vimfiles`      - directory of Vim configuration files
 *  Mac, Unix:   `$HOME/.vim`
 *  Win:         `$HOME/vimfiles`
 

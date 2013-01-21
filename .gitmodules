@@ -1,18 +1,18 @@
-[submodule "cfg/bundle/pathogen"]
-	path = cfg/bundle/pathogen
+[submodule "vimfiles/bundle/pathogen"]
+	path = vimfiles/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "cfg/bundle/vimproc"]
-	path = cfg/bundle/vimproc
+[submodule "vimfiles/bundle/vimproc"]
+	path = vimfiles/bundle/vimproc
 	url = git://github.com/Shougo/vimproc.git
-[submodule "cfg/bundle/neocomplcache"]
-	path = cfg/bundle/neocomplcache
+[submodule "vimfiles/bundle/neocomplcache"]
+	path = vimfiles/bundle/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
-[submodule "cfg/bundle/ghc-mod"]
-	path = cfg/bundle/ghc-mod
+[submodule "vimfiles/bundle/ghc-mod"]
+	path = vimfiles/bundle/ghc-mod
 	url = git://github.com/eagletmt/ghcmod-vim.git
-[submodule "cfg/bundle/neco-ghc"]
-	path = cfg/bundle/neco-ghc
+[submodule "vimfiles/bundle/neco-ghc"]
+	path = vimfiles/bundle/neco-ghc
 	url = git://github.com/ujihisa/neco-ghc.git
-[submodule "cfg/bundle/haskellmode"]
-	path = cfg/bundle/haskellmode
+[submodule "vimfiles/bundle/haskellmode"]
+	path = vimfiles/bundle/haskellmode
 	url = git://github.com/lukerandall/haskellmode-vim.git
