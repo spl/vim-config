@@ -5,6 +5,15 @@ Introduction
 This repository contains all the configuration files and scripts that I (Sean
 Leather) use with Vim across various platforms.
 
+Initialization
+--------------
+
+After first cloning this repository, you need to fetch the submodules. To do
+this, run the following commands in the top-level directory of the repository.
+
+    > git submodule init
+    > git submodule update
+
 Usage
 -----
 
