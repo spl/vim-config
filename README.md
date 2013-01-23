@@ -14,6 +14,8 @@ this, run the following commands in the top-level directory of the repository.
     > git submodule init
     > git submodule update
 
+Then, build the vimproc code by following their installation instructions.
+
 Usage
 -----
 
