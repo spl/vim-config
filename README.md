@@ -34,3 +34,19 @@ locations on the right.
 `bin/macvim`    - command-line script chooses `gvim` or `gvimdiff` for `MacVim`
 *  Mac:         `$HOME/bin/gvim` *and* `$HOME/bin/gvimdiff`
 
+Submodules
+----------
+
+To add a new submodule, use the following command template:
+
+    git submodule add <repository> vimfiles/bundle/<name>
+
+When using GitHub, use the Git read-only option (`git://`) instead of the SSH
+option (`git@`). If you own the submodule, it's better to clone the repository
+elsewhere for updating it.
+
+In `git status`, you will notice that `.gitmodules` has been updated and the
+new directory has been created (as a "new file"). Commit these:
+
+    git commit -m "Install <name> submodule"
+
