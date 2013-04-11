@@ -16,3 +16,6 @@
 [submodule "vimfiles/bundle/haskellmode"]
 	path = vimfiles/bundle/haskellmode
 	url = git://github.com/lukerandall/haskellmode-vim.git
+[submodule "vimfiles/bundle/html-template-syntax"]
+	path = vimfiles/bundle/html-template-syntax
+	url = git://github.com/pbrisbin/html-template-syntax.git
