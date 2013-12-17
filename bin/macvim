@@ -34,10 +34,8 @@ if [ -z "$VIM_APP_DIR" ]
 then
 	myDir="`dirname "$0"`"
 	myAppDir="$myDir/../Applications"
-	for i in ~/Applications ~/Applications/vim $myDir $myDir/vim $myAppDir $myAppDir/vim /Applications /Applications/vim /Applications/Utilities /Applications/Utilities/vim
-	do
-		if [ -x "$i/MacVim.app" ]
-		then
+	for i in ~/Applications ~/Applications/vim $myDir $myDir/vim $myAppDir $myAppDir/vim /Applications /Applications/vim /Applications/Utilities /Applications/Utilities/vim; do
+		if [ -x "$i/MacVim.app" ]; then
 			VIM_APP_DIR="$i"
 			break
 		fi
@@ -58,12 +56,12 @@ gui=
 opts=
 
 # GUI mode, implies forking
-case "$name" in m*|g*|rg*) gui=true ;; esac
+case "$name" in m*|g*|rm*|rg*) gui=true ;; esac
 
 # Restricted mode
 case "$name" in r*) opts="$opts -Z";; esac
 
-# vimdiff and view
+# vimdiff, view, and ex mode
 case "$name" in
 	*vimdiff)
 		opts="$opts -dO"
@@ -71,14 +69,16 @@ case "$name" in
 	*view)
 		opts="$opts -R"
 		;;
+	*ex)
+		opts="$opts -e"
+		;;
 esac
 
 # Last step:  fire up vim.
 # The program should fork by default when started in GUI mode, but it does
 # not; we work around this when this script is invoked as "gvim" or "rgview"
 # etc., but not when it is invoked as "vim -g".
-if [ "$gui" ]
-then
+if [ "$gui" ]; then
 	# Note: this isn't perfect, because any error output goes to the
 	# terminal instead of the console log.
 	# But if you use open instead, you will need to fully qualify the
