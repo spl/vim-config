@@ -11,8 +11,7 @@ Initialization
 After first cloning this repository, you need to fetch the submodules. To do
 this, run the following commands in the top-level directory of the repository.
 
-    > git submodule init
-    > git submodule update
+    > git submodule update --init
 
 Then, build the vimproc code by following their installation instructions.
 
