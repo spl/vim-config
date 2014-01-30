@@ -19,3 +19,6 @@
 [submodule "vimfiles/bundle/html-template-syntax"]
 	path = vimfiles/bundle/html-template-syntax
 	url = git://github.com/pbrisbin/html-template-syntax.git
+[submodule "vimfiles/bundle/typescript"]
+	path = vimfiles/bundle/typescript
+	url = git@github.com:leafgarland/typescript-vim.git
