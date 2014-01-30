@@ -59,6 +59,7 @@ set shiftwidth=2  " Number of spaces for an indent
 set expandtab     " I don't like tabs, so put spaces in their place.
 
 set visualbell    " Don't beep at me!
+set mouse=a       " Use the mouse in all modes (great for terminal)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Font
