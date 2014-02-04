@@ -135,6 +135,11 @@ source $VIMRUNTIME/macros/matchit.vim
 " Completion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" File name completion: case insensitive
+if exists("&wildignorecase")
+  set wildignorecase
+endif
+
 " Insert mode completion: always show menu and extra information
 set completeopt=menuone,preview
 
