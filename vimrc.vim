@@ -112,6 +112,17 @@ map <C-J> gwap
 map <C-K> gw}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Common Regular Expressions
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" These common regexes can accessed by using '/<C-R>=name' where name is one of
+" the variable names below.
+
+" This is the standard diff pattern identifying where the changes are in an
+" overwritten file.
+let diffpat='^<<<<<<<\|^=======\|^>>>>>>>'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " haskellmode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
