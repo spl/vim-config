@@ -19,3 +19,6 @@
 [submodule "vimfiles/bundle/typescript"]
 	path = vimfiles/bundle/typescript
 	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "vimfiles/bundle/vim-syntax-shakespeare"]
+	path = vimfiles/bundle/vim-syntax-shakespeare
+	url = git@github.com:pbrisbin/vim-syntax-shakespeare.git
