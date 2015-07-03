@@ -123,21 +123,6 @@ map <C-K> gw}
 let diffpat='^<<<<<<<\|^=======\|^>>>>>>>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" haskellmode
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Set compiler to GHC for Haskell/Literate Haskell files
-au BufEnter *.hs,*.lhs compiler ghc
-
-" Tell ghc.vim which executable to use
-let g:ghc="/usr/bin/ghc"
-
-" Configure haskell_doc.vim
-let g:haddock_browser="open" " Execute to browse HTML
-let g:haddock_browser_callformat="%s file://%s" " Call browser with this format
-let g:haddock_browser_nosilent=1 " Ask before opening browser
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " matchit
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
