@@ -99,7 +99,7 @@ au BufNewFile,BufRead *.dats,*.sats,*cats       setf ats
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key mappings
+" Paragraph formatting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Format the current paragraph (based on formatoptions) and leave the cursor
@@ -110,6 +110,26 @@ map <C-J> gwap
 " Same as gwap, except only do the lines from the cursor position to the end of
 " the paragraph.
 map <C-K> gw}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Paste without overwriting register
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Source: https://stackoverflow.com/a/290723/545794
+
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+
+" Change the p command. This supports "rp that replaces the selection by the
+" contents of @r.
+vnoremap <silent> <expr> p <sid>Repl()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Common Regular Expressions
