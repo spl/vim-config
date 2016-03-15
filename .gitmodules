@@ -10,3 +10,6 @@
 [submodule "vimfiles/bundle/vim-syntax-shakespeare"]
 	path = vimfiles/bundle/vim-syntax-shakespeare
 	url = git@github.com:pbrisbin/vim-syntax-shakespeare.git
+[submodule "vimfiles/bundle/pgsql"]
+	path = vimfiles/bundle/pgsql
+	url = git@github.com:exu/pgsql.vim.git

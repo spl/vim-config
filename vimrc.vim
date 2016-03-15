@@ -98,6 +98,8 @@ au BufNewFile,BufRead *.lagda                   setf lhaskell " Literate Agda
 au BufNewFile,BufRead *.dats,*.sats,*cats       setf ats
 augroup END
 
+let g:sql_type_default = 'pgsql' " PostgreSQL
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Paragraph formatting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
