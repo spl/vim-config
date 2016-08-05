@@ -8,12 +8,9 @@ Leather) use with Vim across various platforms.
 Initialization
 --------------
 
-After first cloning this repository, you need to fetch the submodules. To do
-this, run the following commands in the top-level directory of the repository.
-
-    > git submodule update --init
-
-Then, build the vimproc code by following their installation instructions.
+After cloning this repository or updating it, you need to update the submodules.
+To do this, run `make` in the top-level directory of the repository. This will
+update the submodules and build the `vimproc` library.
 
 Usage
 -----
