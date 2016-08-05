@@ -13,3 +13,6 @@
 [submodule "vimfiles/bundle/pgsql"]
 	path = vimfiles/bundle/pgsql
 	url = git@github.com:exu/pgsql.vim.git
+[submodule "vimfiles/bundle/abolish"]
+	path = vimfiles/bundle/abolish
+	url = git@github.com:tpope/vim-abolish.git
