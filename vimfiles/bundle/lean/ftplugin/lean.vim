@@ -1,3 +1,8 @@
+" Ignore generated files
+set wildignore+=*.d,*.clean,*.ilean,*.olean
+
+" Keybindings for non-ASCII characters
+
 :map! <buffer> \neg ¬
 :map! <buffer> \not ¬
 :map! <buffer> \and ∧
