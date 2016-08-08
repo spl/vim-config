@@ -25,6 +25,8 @@
 :map! <buffer> \Sigma Σ
 
 :map! <buffer> \prod ×
+:map! <buffer> \times ×
+:map! <buffer> \x ×
 :map! <buffer> \uplus ⊎
 :map! <buffer> \u+ ⊎
 
