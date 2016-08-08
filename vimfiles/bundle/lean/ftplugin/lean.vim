@@ -1,7 +1,3 @@
-" In Emacs, Lean seems to use DIVIDES (U+2223) and doesn't recognize VERTICAL
-" LINE (|).
-nnoremap <buffer> \| ∣
-
 :map! <buffer> \neg ¬
 :map! <buffer> \not ¬
 :map! <buffer> \and ∧
@@ -69,6 +65,7 @@ nnoremap <buffer> \| ∣
 
 :map! <buffer> \le ≤
 :map! <buffer> \ge ≥
+:map! <buffer> \\| ∣
 :map! <buffer> \equiv ≃
 :map! <buffer> \~= ≅
 :map! <buffer> \== ≡
