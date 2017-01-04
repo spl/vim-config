@@ -94,6 +94,7 @@ au BufNewFile,BufRead *.vpp,*.sv,*.svpp         setf verilog
 au BufNewFile,BufRead *.flex,*.jflex            setf jflex
 au BufNewFile,BufRead *.yacc                    setf yacc
 au BufNewFile,BufRead *.ghs                     setf haskell " Generic Haskell
+au BufNewFile,BufRead *.hsc                     setf haskell " Haskell with C
 au BufNewFile,BufRead *.lagda                   setf lhaskell " Literate Agda
 au BufNewFile,BufRead *.dats,*.sats,*cats       setf ats
 augroup END
