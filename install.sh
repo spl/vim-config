@@ -10,8 +10,10 @@ MKDIR="mkdir -p --"
 SRC=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 
 # Update the submodules
+pushd "$SRC" > /dev/null
 git submodule sync > /dev/null
 git submodule update --init
+popd > /dev/null
 
 # Platform name
 UNAME_S="$(uname -s)"
