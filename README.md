@@ -15,6 +15,12 @@ update the submodules and build the `vimproc` library.
 Usage
 -----
 
+## Easy
+
+Run the [`install.sh`](./install.sh) script.
+
+## The Details
+
 You should create the appropriate links to each of the files or directories in
 this repository. The following files on the left should be linked to the
 locations on the right.
@@ -30,8 +36,7 @@ locations on the right.
 `bin/macvim`    - command-line script chooses `gvim` or `gvimdiff` for `MacVim`
 *  Mac:         `$HOME/bin/gvim` *and* `$HOME/bin/gvimdiff`
 
-Submodules
-----------
+### Submodules
 
 To add a new submodule, use the following command template:
 
