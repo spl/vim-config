@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # Symbolic link with force and don't follow existing link
 LN="ln -nsf --"
@@ -8,6 +8,10 @@ MKDIR="mkdir -p --"
 
 # Full directory path of script
 SRC=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+
+# Update the submodules
+git submodule sync > /dev/null
+git submodule update --init
 
 # Platform name
 UNAME_S="$(uname -s)"
@@ -33,4 +37,4 @@ case "$UNAME_S" in
     ;;
 esac
 
-(cd "$SRC/vimfiles/bundle/vimproc" && make -f Makefile > /dev/null)
+make -C "$SRC/vimfiles/bundle/vimproc" > /dev/null

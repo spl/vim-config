@@ -1,21 +1,9 @@
-
-Introduction
-------------
+# Introduction
 
 This repository contains all the configuration files and scripts that I (Sean
 Leather) use with Vim across various platforms.
 
-Initialization
---------------
-
-After cloning this repository or updating it, you need to update the submodules.
-To do this, run `make` in the top-level directory of the repository. This will
-update the submodules and build the `vimproc` library.
-
-Usage
------
-
-## Easy
+# Usage
 
 Run the [`install.sh`](./install.sh) script.
 
