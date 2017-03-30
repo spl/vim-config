@@ -15,6 +15,7 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \iff ↔
 :map! <buffer> \lr ↔
 :map! <buffer> \<-> ↔
+:map! <buffer> \=> ⇒
 :map! <buffer> \<=> ⇔
 
 :map! <buffer> \all ∀
@@ -61,6 +62,8 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \> ⟩
 :map! <buffer> \<< ⟪
 :map! <buffer> \>> ⟫
+:map! <buffer> \[[ ⟦
+:map! <buffer> \]] ⟧
 
 :map! <buffer> \in ∈
 :map! <buffer> \nin ∌
@@ -70,6 +73,9 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \sub ⊂
 :map! <buffer> \subeq ⊆
 
+:map! <buffer> \unp ⊎
+:map! <buffer> \unm ⩁
+
 :map! <buffer> \le ≤
 :map! <buffer> \ge ≥
 :map! <buffer> \\| ∣
@@ -78,6 +84,7 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \== ≡
 
 :map! <buffer> \comp ∘
+:map! <buffer> \fcmp ⨾
 
 :map! <buffer> \_1 ₁
 :map! <buffer> \_2 ₂
@@ -89,7 +96,6 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \_8 ₈
 :map! <buffer> \_9 ₉
 
-:map! \alpha α
 :map! \alpha α
 :map! \beta β
 :map! \gamma γ
