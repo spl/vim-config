@@ -19,3 +19,6 @@
 [submodule "vimfiles/bundle/repeat"]
 	path = vimfiles/bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "vimfiles/bundle/rust"]
+	path = vimfiles/bundle/rust
+	url = git@github.com:rust-lang/rust.vim.git
