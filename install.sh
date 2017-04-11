@@ -39,4 +39,5 @@ case "$UNAME_S" in
     ;;
 esac
 
-make -C "$SRC/vimfiles/bundle/vimproc" > /dev/null
+# Don't require the build in case it fails on a given system.
+make -C "$SRC/vimfiles/bundle/vimproc" > /dev/null || true
