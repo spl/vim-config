@@ -26,16 +26,21 @@ locations on the right.
 
 ### Submodules
 
-To add a new submodule, use the following command template:
+To add a new submodule as a bundle, use the following instructions.
 
-    git submodule add <repository> vimfiles/bundle/<name>
+1. Add the `git` submodule with this command (template):
 
-When using GitHub, use the Git read-only option (`git://`) instead of the SSH
-option (`git@`). If you own the submodule, it's better to clone the repository
-elsewhere for updating it.
+   ```
+   $ git submodule add <repository> vimfiles/bundle/<name>
+   ```
 
-In `git status`, you will notice that `.gitmodules` has been updated and the
-new directory has been created (as a "new file"). Commit these:
+   Always use `https://` for the repository protocol (and not `git@`) to avoid
+   requiring authentication on hosts for which you don't have your SSH public
+   key shared.
 
-    git commit -m "Install <name> submodule"
+2. Commit the changed `.gitmodules` and the new `vimfiles/bundle` directory
+   (which appears as a "new file")  with this command (template):
 
+   ```
+   $ git commit -m "Add <name> bundle"
+   ```
