@@ -22,3 +22,6 @@
 [submodule "vimfiles/bundle/rust"]
 	path = vimfiles/bundle/rust
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vimfiles/bundle/ansible"]
+	path = vimfiles/bundle/ansible
+	url = https://github.com/pearofducks/ansible-vim.git
