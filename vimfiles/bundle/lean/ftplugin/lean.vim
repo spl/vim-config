@@ -12,6 +12,7 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \-> →
 :map! <buffer> \r →
 :map! <buffer> \imp →
+:map! <buffer> \<- ←
 :map! <buffer> \iff ↔
 :map! <buffer> \lr ↔
 :map! <buffer> \<-> ↔
