@@ -66,6 +66,7 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \[[ ⟦
 :map! <buffer> \]] ⟧
 
+:map! <buffer> \empty ∅
 :map! <buffer> \in ∈
 :map! <buffer> \nin ∌
 :map! <buffer> \notin ∉
