@@ -81,6 +81,7 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \le ≤
 :map! <buffer> \ge ≥
 :map! <buffer> \\| ∣
+:map! <buffer> \~- ≃
 :map! <buffer> \equiv ≃
 :map! <buffer> \~= ≅
 :map! <buffer> \== ≡
