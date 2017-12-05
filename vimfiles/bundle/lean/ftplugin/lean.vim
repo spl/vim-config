@@ -3,6 +3,9 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 
 " Keybindings for non-ASCII characters
 
+" See the Emacs lean-mode input
+" https://github.com/leanprover/lean-mode/blob/master/lean-input.el
+
 :map! <buffer> \neg ¬
 :map! <buffer> \not ¬
 :map! <buffer> \and ∧
@@ -85,6 +88,10 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \equiv ≃
 :map! <buffer> \~= ≅
 :map! <buffer> \== ≡
+
+:map! <buffer> \~ ∼
+:map! <buffer> \~~ ≈
+:map! <buffer> \~~~ ≋
 
 :map! <buffer> \comp ∘
 :map! <buffer> \fcmp ⨾
