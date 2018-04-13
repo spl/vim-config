@@ -77,6 +77,8 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \un ∪
 :map! <buffer> \sub ⊂
 :map! <buffer> \subeq ⊆
+:map! <buffer> \nsub ⊄
+:map! <buffer> \nsubeq ⊈
 
 :map! <buffer> \unp ⊎
 :map! <buffer> \unm ⩁
