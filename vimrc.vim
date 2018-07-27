@@ -29,12 +29,13 @@ set noguipty " Disable pseudo-tty
 syntax on " Turn on syntax highlighting
 filetype plugin indent on " Detect file types with plugins and indentation
 
-set number    " Show line numbers on the left
-set showmode  " Show current mode (INSERT, REPLACE, or VISUAL) on command line
-set showcmd   " Show the command in the status line
-set ruler     " Show line and column number of cursor at the bottom
-set nowrap    " Don't wrap displayed lines
-set linebreak " But if I do 'set wrap', then wrap with the 'breakat' characters
+set number       " Show line numbers on the left
+set showmode     " Show current mode (INSERT, REPLACE, or VISUAL) on command line
+set laststatus=2 " Always show the status line
+set showcmd      " Show the command in the status line
+set ruler        " Show line and column number of cursor at the bottom
+set nowrap       " Don't wrap displayed lines
+set linebreak    " But if I do 'set wrap', then wrap with the 'breakat' characters
 
 set background=light " Use a lighter background. Better for the eyes?
 
