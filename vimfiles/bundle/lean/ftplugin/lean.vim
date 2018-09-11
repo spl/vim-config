@@ -100,6 +100,7 @@ set wildignore+=*.d,*.clean,*.ilean,*.olean
 :map! <buffer> \comp ∘
 :map! <buffer> \fcmp ⨾
 
+:map! <buffer> \_0 ₀
 :map! <buffer> \_1 ₁
 :map! <buffer> \_2 ₂
 :map! <buffer> \_3 ₃
