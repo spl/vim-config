@@ -102,6 +102,9 @@ augroup END
 
 let g:sql_type_default = 'pgsql' " PostgreSQL
 
+" For Lean files, don't wrap lines.
+au BufNewFile,BufRead *.lean setlocal textwidth=0
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Paragraph formatting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
