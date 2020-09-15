@@ -90,20 +90,21 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 augroup filetypedetect
-au BufNewFile,BufRead *.jak                     setf java " Jak
-au BufNewFile,BufRead *.vpp,*.sv,*.svpp         setf verilog
-au BufNewFile,BufRead *.flex,*.jflex            setf jflex
-au BufNewFile,BufRead *.yacc                    setf yacc
-au BufNewFile,BufRead *.ghs                     setf haskell " Generic Haskell
-au BufNewFile,BufRead *.hsc                     setf haskell " Haskell with C
-au BufNewFile,BufRead *.lagda                   setf lhaskell " Literate Agda
-au BufNewFile,BufRead *.dats,*.sats,*cats       setf ats
+au BufNewFile,BufRead *.jak                setfiletype java " Jak
+au BufNewFile,BufRead *.vpp,*.sv,*.svpp    setfiletype verilog
+au BufNewFile,BufRead *.flex,*.jflex       setfiletype jflex
+au BufNewFile,BufRead *.yacc               setfiletype yacc
+au BufNewFile,BufRead *.ghs                setfiletype haskell " Generic Haskell
+au BufNewFile,BufRead *.hsc                setfiletype haskell " Haskell with C
+au BufNewFile,BufRead *.lagda              setfiletype lhaskell " Literate Agda
+au BufNewFile,BufRead *.dats,*.sats,*cats  setfiletype ats
+au BufNewFile,BufRead *.njk                setfiletype jinja2 " Nunjucks
 augroup END
 
 let g:sql_type_default = 'pgsql' " PostgreSQL
 
-" For Lean files, don't wrap lines.
-au BufNewFile,BufRead *.lean setlocal textwidth=0
+" For HTML, Nunjucks, Lean, don't wrap lines.
+au BufNewFile,BufRead *.html,*.njk,*.lean setlocal textwidth=0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Paragraph formatting
